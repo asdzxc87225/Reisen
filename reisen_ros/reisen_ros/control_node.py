@@ -17,7 +17,7 @@ class ControlNode(Node):
             10)
         self.Wheel = self.create_publisher(
             Wheel,
-            'Wheel',
+            'Wheel_target',
             10)
         self.get_logger().info('control node start')
 
@@ -33,6 +33,7 @@ class ControlNode(Node):
         self.get_logger().info('whell:\t%f'%speed.right_wheel_rps)
         self.get_logger().info('left:\t%f'%speed.left_wheel_rps)
         self.Wheel.publish(speed)
+        
 
 def main(args=None):
     rclpy.init(args=args)

@@ -24,6 +24,7 @@ setup(
              'control = reisen_ros.control_node:main',
              'odom = reisen_ros.diff_odom:main',
              'serial = reisen_ros.serial_node:main',
+             'to_tf = reisen_ros.odom_to_tf:main',
         ],
     },
 )

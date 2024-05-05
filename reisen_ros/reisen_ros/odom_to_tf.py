@@ -38,7 +38,11 @@ class Odom_to_tf(Node):
 
         self.tf_broadcaster.sendTransform(transform_stamped)
 
-def main():
-    pass
+def main(args=None):
+    rclpy.init(args=args)
+    Odom= Odom_to_of()
+    rclpy.spin(Odom)
+    rclpy.shutdown()
+
 if __name__ == '__main__':
     main()

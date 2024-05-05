@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
              'talker = reisen_ros.publisher_member_function:main',
+             'control = reisen_ros.control_node:main',
         ],
     },
 )

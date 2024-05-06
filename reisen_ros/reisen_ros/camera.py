@@ -8,7 +8,7 @@ from cv_bridge import CvBridge
 class ImagePublisher(Node):
     def __init__(self):
         super().__init__('image_publisher')
-        self.publisher_ = self.create_publisher(Image, '/camera/rgb/image_raw', 10)
+        self.publisher_ = self.create_publisher(Image, '/camera/rgb/image_raw', 100)
         timer_period = 1/20  # seconds
         self.cap = cv2.VideoCapture(0)
         if not self.cap.isOpened():

@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
              'talker = reisen_ros.publisher_member_function:main',
+             'camera = reisen_ros.camera:main',
         ],
     },
 )

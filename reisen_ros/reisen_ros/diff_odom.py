@@ -25,7 +25,7 @@ class OdomCalculator(Node):
         self.tf_broadcaster = tf2_ros.StaticTransformBroadcaster(self)
     def wheel_speed_callback(self,msg):
         r =float(self.get_parameter("wheel_radius").get_parameter_value().string_value)
-        self.get_logger().info(msg)
+        self.get_logger().info(str(msg))
         left_speed = msg.left_wheel_rps*2*pi*r
         right_speed= msg.right_wheel_rps*2*pi*r
         wheel_base = float(self.get_parameter("car_width").get_parameter_value().string_value)

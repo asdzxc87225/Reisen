@@ -14,7 +14,7 @@ class SerialNode(Node):
             10)
         self.get_logger().info('serial node start')
         COM_PORT = '/dev/ttyUSB0'  # 請自行修改序列埠名稱
-        BAUD_RATES = 9600
+        BAUD_RATES = 115200
         self.ser = serial.Serial(COM_PORT, BAUD_RATES)
         self.timer = self.create_timer(0.1, self.clear)
         self.timer1 = self.create_timer(0.05, self.serial_get)
